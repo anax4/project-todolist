@@ -14,6 +14,7 @@ public class TodoService {
 
 	@Autowired
 	private TodoRepo repo;
+	private Item itemToUpdate;
 	
 	 public List<Item> fetchItemList(){
 		  return repo.findAll();
@@ -39,5 +40,20 @@ public class TodoService {
 		}
 			return result;
 		 }
+	 
+	 
+	  public String updateItemInRepo(Item item) {
+	        try {
+	            itemToUpdate = repo.getOne(item.getId());
+
+	            itemToUpdate.setDesc(item.getDesc());
+	            itemToUpdate.setDone(item.isDone());
+	            repo.save(itemToUpdate);
+	            return "Item atualizado";
+	        }catch (Exception e){
+	            return "Erro ao atualizar o item: "+item.getId()+"";
+	        }
+	    }
+
 	 
 }
