@@ -7,4 +7,5 @@ files back end located at: branches / tags 'main'
 
 and Frontend developed using Angular, 
 not located  branches / tags: 'master'
-  > npm intall boostrap
+  > npm install boostrap
+  > npm install jquery
