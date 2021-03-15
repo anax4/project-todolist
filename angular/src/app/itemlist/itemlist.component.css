@@ -1,0 +1,16 @@
+btn-primary {
+  color: #ffff;
+}
+
+h6 {
+  color: #ffff;
+  text-align: center;
+  position: relative;
+  margin-left: 8rem;
+}
+
+container {
+  padding-top: 12rem !important;
+  padding: 5px;
+  margin-top: 5rem;
+}
